@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Audio Visualizer</title>
+        <link rel="icon" href="favicon.jpg"></link>
+
+        <style>
+
+            body {
+                background: #111;
+                overflow: hidden;
+            }
+
+            #AudioVisualizer {
+                background: black;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+
+            #AudioOptionsDiv {
+                background: #222222aa;
+                position: absolute;
+                padding: 15px;
+                left: 0px;
+                top: 100px;
+                border-radius: 10px;
+                cursor: move;
+            }
+
+            #AudioOptionsBGDiv {
+                background: #f3f3f3;
+                padding: 5px;
+                border-radius: 10px;
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                cursor: default;
+            }
+
+            #AudioMessage {
+                color: #111;
+                margin-top: 5px;
+            }
+
+            #Audio {
+                border-radius: 3px;
+            }
+
+            #AudioUpload {
+                background: #f3f3f3;
+                color: #111;
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+
+
+        <canvas id="AudioVisualizer"></canvas>
+
+        <div id="AudioOptionsDiv">
+            <div id="AudioOptionsBGDiv">
+                <h2 id="AudioMessage">Input song file below to play song.</h2>
+                <audio id="Audio" controls hidden="true"></audio>
+                <input id="AudioUpload" type="file" accept="audio/*"></input>
+            </div>
+        </div>
+
+
+
+        <script src="src/useful.js"></script>
+
+
+        <script src="src/audiovisualizer.js"></script>
+        <script src="src/visualize.js"></script>
+        <script src="src/main.js"></script>
+
+    </body>
+
+</html>
